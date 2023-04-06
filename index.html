@@ -1,15 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Kalkulator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' href='css/index.css'>
+    <title>Katik</title>
 </head>
 
 <body>
-    
+    <!-- Tittle -->
+    <h1 class="title">Welcome Katik</h1>
+    <p class="subtitle">
+        Hi Sobat! Selamat datang di Katik :) <br>
+        Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar
+    </p>
+    <!-- Header / Navbar-->
+    <header>
+        <nav>
+            <!-- <ul class="menu">
+                <a onclick="showTriangle()" href="#" class="menu-triangle" id="form-triangle">Segitiga</a>
+                <a onclick="showParallelogram()" href="#" class="menu-parallelogram" id="form-parallelogram">Jajar
+                    Genjang</a>
+            </ul> -->
+        </nav>
+    </header>
+    <!-- Main Page -->
+    <main>
+
+        <!-- Section Segitiga -->
+        <div class="card">
+            <!-- Luas Segitiga -->
+            <section id="triangle">
+                <div class="card">
+                    <div class="card-title">
+                        <h2>Luas Segitiga</h2>
+                    </div>
+                    <div class="formula">
+                        <img src="assets/segitiga.svg" alt="triangle" class="image">
+
+                        <h4>Rumus Luas Segitiga yaitu :</h4>
+                        <p class="formula">L = 1/2 x a x t</p>
+
+                        <div>
+                            <p>Dimana :</p>
+                            <p>L = Luas</p>
+                            <p>a = Panjang Alas</p>
+                            <p>t = Tinggi</p>
+                        </div>
+                    </div>
+                    <!-- Form hitung luas segitiga -->
+                    <div class="form-calculate">
+                        <h1>Hitung Luas Segitiga</h1>
+                        <form action="" class="form-triangle" id="myLuas">
+                            <label>Alas</label>
+                            <input type="number" id="alasSG" required pattern="[0-9]+" title="number only" />
+                            <label>Tinggi</label>
+                            <input type="number" id="tinggiSG" required pattern="[0-9]+" title="number only" />
+                            <button type="submit" class="button-calculate"
+                                onclick="return luasSegitiga()">Hitung</button>
+                        </form>
+                    </div>
+                    <div class="result" id="luassegitiga">
+                    </div>
+                    <div class="reset">
+                        <button type="submit" class="button-reset" onclick="myLuas()" value="reset">Reset</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Keliling Segitiga -->
+            <section id="triangle">
+                <div class="card">
+                    <div class="card-title">
+                        <h2>Keliling Segitiga</h2>
+                    </div>
+                    <div class="formula">
+                        <img src="assets/segitiga.svg" alt="" class="image">
+
+                        <h4>Rumus Keliling Segitiga yaitu :</h4>
+                        <p class="formula">K = S1 + S2 + S3</p>
+
+                        <div>
+                            <p>Dimana :</p>
+                            <p>K= Keliling</p>
+                            <p>S1 = AB = Panjang sisi dari titik A ke B</p>
+                            <p>S2 = BC = Panjang sisi dari titik B ke C</p>
+                            <p>S3 = AC = Panjang sisi dari titik A ke C</p>
+                        </div>
+                    </div>
+                    <div class="form-calculate">
+                        <h1>Hitung Keliling Segitiga</h1>
+                        <form action="" class="form-triangle" id="myKel">
+                            <label>S1</label>
+                            <input type="number" id="s1" required pattern="[0-9]+" title="number only" />
+                            <label>S2</label>
+                            <input type="number" id="s2" required pattern="[0-9]+" title="number only" />
+                            <label>S3</label>
+                            <input type="number" id="s3" required pattern="[0-9]+" title="number only" />
+                            <button type="submit" class="button-calculate"
+                                onclick="return kelilingSegitiga()">Hitung</button>
+                        </form>
+                    </div>
+                    <div class="result" id="kelsegitiga">
+                    </div>
+                    <div class="reset">
+                        <button type="submit" class="button-reset" onclick="myKel()" value="reset">Reset</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ===================================================================================================== -->
+
+        <!-- Section Jajar Genjang -->
+        <div>
+            <!-- Luas Jajar Genjang -->
+            <section id="parallelogram">
+                <div class="card">
+                    <div class="card-title">
+                        <h2>Luas Jajar Genjang</h2>
+                    </div>
+                    <div class="formula">
+                        <img src="assets/jajargenjang.svg" alt="" class="image">
+
+                        <h4>Rumus Luas Jajar Genjang yaitu :</h4>
+                        <p class="formula">L = a x t</p>
+
+                        <div>
+                            <p>Dimana :</p>
+                            <p>L = Luas</p>
+                            <p>a = Panjang Alas</p>
+                            <p>t = Tinggi</p>
+                        </div>
+                    </div>
+                    <div class="form-calculate">
+                        <h1>Hitung Luas Jajar Genjang</h1>
+                        <form action="" class="form-parallelogram" id="myLuas">
+                            <label>Alas</label>
+                            <input type="number" id="alasJG" required pattern="[0-9]+" title="number only" />
+                            <label>Tinggi</label>
+                            <input type="number" id="tinggiJG" required pattern="[0-9]+" title="number only" />
+                            <button type="submit" class="button-calculate" onclick="return luasJG()">Hitung</button>
+                        </form>
+                    </div>
+                    <div class="result" id="luasjg">
+                    </div>
+                    <div class="reset">
+                        <button type="submit" class="button-reset" onclick="myLuas()" value="reset">Reset</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Keliling Jajar Genjang -->
+            <section id="parallelogram">
+                <div class="card">
+                    <div class="card-title">
+                        <h2>Keliling Jajar Genjang</h2>
+                    </div>
+                    <div class="formula">
+                        <img src="assets/jajargenjang.svg" alt="" class="image">
+
+                        <h4>Rumus Keliling Jajar Genjang yaitu :</h4>
+                        <p class="formula">K = 2 * ( a + t )</p>
+
+                        <div>
+                            <p>Dimana :</p>
+                            <p>K= Keliling</p>
+                            <p>a = Panjang Alas</p>
+                            <p>t = Tinggi</p>
+                        </div>
+
+                    </div>
+                    <div class="form-calculate">
+                        <h1>Hitung Keliling Jajar Genjang</h1>
+                        <form action="" class="form-parallelogram" id="myKel">
+                            <label>Alas</label>
+                            <input type="number" id="alasJG2" required pattern="[0-9]+" title="number only" />
+                            <label>Tinggi</label>
+                            <input type="number" id="tinggiJG2" required pattern="[0-9]+" title="number only" />
+                            <button type="submit" class="button-calculate" onclick="return kelilingJG()">Hitung</button>
+                        </form>
+                    </div>
+                    <div class="result" id="keljg">
+                    </div>
+                    <div class="reset">
+                        <button type="submit" class="button-reset" onclick="myKel()" value="reset">Reset</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        Copyright © 2023 | MFM. All Rights Reserved
+    </footer>
 </body>
+
+<!-- Javascript -->
+<script src='js/index.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

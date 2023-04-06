@@ -1,0 +1,188 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile view */
+@media only screen and (max-width: 800px) {
+    .calculate {
+        flex-direction: column;
+    }
+}
+
+/* Body */
+body {
+    padding: 0px 40px;
+    scroll-behavior: smooth;
+}
+
+/* title */
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* subtitle */
+.subtitle {
+    margin: 10px 0px;
+    text-align: center;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu>a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-triangle {
+    text-decoration: none;
+    background-color: darkblue;
+    color: white;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.menu-parallelogram {
+    text-decoration: none;
+    background-color: darkblue;
+    color: white;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+
+/* Card Title*/
+.card-title {
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    border: 2px darkblue solid;
+    box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 2);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Ukuran Gambar */
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Section Rumus */
+.formula {
+    padding: 20px;
+}
+
+/* Tampilan Rumus */
+.formula>p {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Keterangan Rumus */
+.formula-note {
+    gap: 10px;
+}
+
+/* Form Hitungan */
+.form-calculate {
+    padding: 20px;
+    border: 1px darkblue groove;
+}
+
+.form-calculate>h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Form Hitung Segitiga */
+.form-triangle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-triangle>input {
+    padding: 8px 4px;
+    border-radius: 6px;
+    width: 50%;
+    text-align: right;
+}
+
+/* Form Hitung Jajar Genjang */
+.form-parallelogram {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-parallelogram>input {
+    padding: 8px 4px;
+    border-radius: 6px;
+    width: 50%;
+    text-align: right;
+}
+
+/* button hitung*/
+.button-calculate {
+    padding: 6px 8px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+/* hasil */
+.result {
+    padding: 10px;
+}
+
+/* Reset */
+.reset {
+    padding: 20px;
+    text-align: right;
+}
+
+.button-reset {
+    padding: 6px 8px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
